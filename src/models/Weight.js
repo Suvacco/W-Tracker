@@ -1,10 +1,8 @@
 import mongoose from "mongoose";
 
 const weightSchema = new mongoose.Schema({
-    weight: Number,
-    date: Date
+    date: Date,
+    weight: String
 })
 
-const Weight = mongoose.models.Weight || mongoose.model('Weight', weightSchema)
-
-export default Weight
+export default mongoose.models.Weight || mongoose.model('Weight', weightSchema)

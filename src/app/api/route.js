@@ -7,7 +7,7 @@ export async function POST(req) {
 
     const body = await req.json()
 
-    const weight = await Weight.create({weight: body.weightValue, date: new Date()})
+    await Weight.create({weight: body.weight, date: new Date()})
 
     return NextResponse.json({}, {status: 200})
 }
