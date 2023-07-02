@@ -15,7 +15,7 @@ export default function DataTable({ data }) {
             <TableBody>
                 
                 {data.map((record) => (
-                    <Data key={record.id} weight={record.weight} date={record.date} />
+                    <Data key={record._id} weight={record.weight} date={record.date} />
                 ))}
                 
             </TableBody>
